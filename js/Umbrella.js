@@ -4,7 +4,7 @@ class Umbrella{
             isStatic:true
         };
         
-        this.body=Bodies.rectangle(144,505,40,5,options);
+        this.body=Bodies.rectangle(windowWidth/2,windowHeight-60,20,200,options);
         this.width=40;
         this.height=5;
         World.add(world,this.body);
