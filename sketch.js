@@ -4,7 +4,7 @@ const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 var engine,world;
 
-var maxDrops=100;
+var maxDrops=500;
 var drops=[];
 var man,manAni;
 var thunder,thunder1,thunder2,thunder3,thunder4;                                                              
@@ -26,13 +26,13 @@ function setup(){
    
         for(var i=0; i<maxDrops; i++){
             if(i % 2 === 0){
-                drops.push(new Drops(random(0,800),random(0,800)));
+                drops.push(new Drops(random(0,windowWidth),random(0,windowHeight)));
             }
         }
 
-        var man=createSprite(150,windowHeight-60,20,200);
+        var man=createSprite(windowWidth/2,windowHeight-60,20,200);
         man.addAnimation("man",manAni);
-        man.scale=0.2;
+        man.scale=0.3;
 
         umbrella=new Umbrella();
 }
@@ -46,7 +46,9 @@ function draw(){
     
     for(var s=0; s<drops.length; s++){
 
-        drops[s].display();drops[s].update();
+        drops[s].display();
+        
+        drops[s].update();
     }
     
     drawSprites();
@@ -55,9 +57,9 @@ function draw(){
 function spawn(){
     var rand=Math.round(random(1,4));
    
-if(frameCount%50==0){
+if(frameCount%30==0){
     thunderFrame=frameCount;
-thunder=createSprite(random(10,370),random(10,30),10,10);
+thunder=createSprite(random(10,windowWidth),random(10,30),10,10);
 switch(rand){
 case 1:thunder.addImage(thunder1);
 break;
