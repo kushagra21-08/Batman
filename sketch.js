@@ -20,13 +20,13 @@ function preload(){
 }
 
 function setup(){
-   createCanvas(300,windowHeight);
+   createCanvas(600,windowHeight);
     engine=Engine.create();
     world=engine.world;
    
         for(var i=0; i<maxDrops; i++){
             if(i % 2 === 0){
-                drops.push(new Drops(random(0,400),random(0,400)));
+                drops.push(new Drops(random(0,600),random(0,600)));
             }
         }
 
