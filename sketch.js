@@ -71,7 +71,7 @@ case 4:thunder.addImage(thunder4);
 break;
 default:break;
 }
-thunder.scale=random(0.3,0.6);
+thunder.scale=random(0.3,0.8);
 }
 if(thunderFrame+10===frameCount){
 thunder.destroy();
