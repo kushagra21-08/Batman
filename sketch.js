@@ -20,7 +20,7 @@ function preload(){
 }
 
 function setup(){
-   createCanvas(800,windowHeight);
+   createCanvas(windowWidth,windowHeight);
     engine=Engine.create();
     world=engine.world;
    
