@@ -25,7 +25,7 @@ pop();
 
 update(){
 if(this.body.position.y>windowHeight){
-    Matter.Body.setPosition(this.body,{x:random(0,400) , y:random(0,400)})
+    Matter.Body.setPosition(this.body,{x:random(0,windowWidth) , y:random(0,windowHeight)})
 }
 }
 }
